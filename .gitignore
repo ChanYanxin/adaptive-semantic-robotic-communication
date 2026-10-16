@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+build/
+dist/
+results/*
+!results/.gitkeep
+*.mp4
+*.avi
+*.pt
+*.onnx
+.DS_Store

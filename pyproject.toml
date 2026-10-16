@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "adaptive-semantic-robotic-communication"
+version = "0.1.0"
+description = "Task-adaptive semantic communication benchmark for warehouse robotics"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Yanxin Chen"}]
+license = {text = "MIT"}
+dependencies = ["numpy>=1.24,<3", "opencv-python-headless>=4.8,<5", "msgpack>=1.0,<2"]
+[project.optional-dependencies]
+plots = ["matplotlib>=3.7,<4"]
+test = ["pytest>=7,<10"]
+yolo = ["ultralytics>=8,<9"]
+[project.scripts]
+semantic-robot = "semantic_robot.cli:main"
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
